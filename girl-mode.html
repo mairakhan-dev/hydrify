@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Hydrify AI — Girl Mode | Kawaii Hydration</title>
+  <title>Hydrify AI — Girl Mode | Kawaii Hydration World</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -19,6 +19,7 @@
       min-height: 100vh;
     }
 
+    /* Dreamy watercolor dots */
     body::before {
       content: "";
       position: fixed;
@@ -26,14 +27,14 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(circle at 25% 35%, rgba(255,200,220,0.15) 1.8%, transparent 2%);
-      background-size: 60px 60px;
+      background-image: radial-gradient(circle at 25% 35%, rgba(255,200,220,0.2) 1.8%, transparent 2%);
+      background-size: 55px 55px;
       pointer-events: none;
       z-index: 0;
     }
 
     .container {
-      max-width: 1400px;
+      max-width: 1300px;
       margin: 0 auto;
       padding: 1.5rem 2rem 3rem;
       position: relative;
@@ -48,97 +49,125 @@
       flex-wrap: wrap;
       gap: 1rem;
       margin-bottom: 2rem;
-      background: rgba(255, 250, 245, 0.9);
+      background: rgba(255, 250, 245, 0.92);
       backdrop-filter: blur(12px);
       padding: 0.6rem 1.8rem;
       border-radius: 100px;
-      border: 1px solid rgba(255, 183, 197, 0.5);
+      border: 1px solid rgba(255, 183, 197, 0.6);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     }
+
     .logo-area {
       display: flex;
       align-items: center;
       gap: 16px;
     }
+
     .logo-area img {
       height: 65px;
       width: auto;
       filter: drop-shadow(0 8px 20px rgba(255,150,180,0.3));
+      border-radius: 16px;
     }
+
     .logo-text {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 800;
       background: linear-gradient(135deg, #ffb7c5, #aad0ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
+
     .back-home {
       background: #ffe0d4;
       border: none;
-      padding: 8px 20px;
-      border-radius: 40px;
+      padding: 8px 24px;
+      border-radius: 50px;
       font-weight: 600;
+      font-size: 0.9rem;
       cursor: pointer;
+      transition: 0.2s;
+      color: #5a3a4a;
     }
 
-    /* Hero */
-    .hero-banner {
-      background: rgba(255, 250, 245, 0.85);
+    .back-home:hover {
+      background: #ffb7c5;
+      transform: scale(1.02);
+    }
+
+    /* Hero Section - BIG */
+    .hero-section {
+      background: rgba(255, 250, 245, 0.88);
       backdrop-filter: blur(6px);
-      border-radius: 64px;
+      border-radius: 56px;
       padding: 2rem;
       margin-bottom: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
       border: 1px solid rgba(255, 183, 197, 0.5);
-    }
-    .hero-img {
-      flex: 1;
       text-align: center;
     }
-    .hero-img img {
-      max-height: 200px;
+
+    .hero-image {
+      margin-bottom: 1rem;
+    }
+
+    .hero-image img {
       max-width: 100%;
+      max-height: 200px;
+      object-fit: contain;
       border-radius: 32px;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.1));
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
     }
-    .hero-text {
-      flex: 1.5;
-    }
-    .hero-text h1 {
+
+    .hero-section h1 {
       font-size: 2rem;
       background: linear-gradient(135deg, #ffb7c5, #aad0ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      margin: 0.5rem 0;
     }
 
-    /* Grid */
+    .hero-section p {
+      color: #6a5a6a;
+      margin-bottom: 1rem;
+    }
+
+    /* Dashboard Grid */
     .dashboard-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
+
     .card {
       background: rgba(255, 250, 245, 0.88);
       backdrop-filter: blur(8px);
       border-radius: 42px;
-      padding: 1.2rem;
+      padding: 1.3rem;
       border: 1px solid rgba(255, 183, 197, 0.4);
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
-    .card:hover { transform: translateY(-4px); border-color: #ffb7c5; }
-    .card-large { grid-column: span 2; }
-    .card-full { grid-column: span 3; }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #ffb7c5;
+      box-shadow: 0 12px 25px rgba(255,183,197,0.15);
+    }
+
+    .card-full {
+      grid-column: span 2;
+    }
+
     .card img {
       width: 100%;
       max-height: 140px;
       object-fit: contain;
+      background: transparent;
+      margin: 0.6rem 0;
       border-radius: 24px;
-      margin: 0.5rem 0;
     }
+
     .stat-number {
       font-size: 2.5rem;
       font-weight: 800;
@@ -147,90 +176,165 @@
       background-clip: text;
       color: transparent;
     }
+
     .progress-bar-bg {
       height: 12px;
       background: rgba(0,0,0,0.08);
-      border-radius: 20px;
+      border-radius: 30px;
+      overflow: hidden;
       margin: 0.8rem 0;
     }
+
     .progress-fill {
       height: 100%;
       background: linear-gradient(90deg, #ffb3c6, #aad0ff);
-      border-radius: 20px;
+      border-radius: 30px;
       width: 0%;
-      transition: width 0.4s;
+      transition: width 0.5s ease;
     }
+
     .quick-add {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       margin-top: 1rem;
     }
+
     .sip-btn {
-      background: rgba(0,0,0,0.05);
+      background: rgba(0,0,0,0.04);
       border: 1px solid #ffb7c5;
-      padding: 6px 14px;
-      border-radius: 40px;
+      padding: 8px 18px;
+      border-radius: 50px;
       font-weight: 600;
+      color: #5a4a5a;
       cursor: pointer;
       transition: 0.2s;
+      font-family: 'Quicksand', sans-serif;
     }
-    .sip-btn:hover { background: #ffb7c5; color: #4a3b4a; }
+
+    .sip-btn:hover {
+      background: #ffb7c5;
+      color: #4a3b4a;
+      transform: scale(0.98);
+    }
+
     .btn-primary {
       background: #ffb7c5;
       border: none;
       padding: 10px 24px;
-      border-radius: 40px;
+      border-radius: 50px;
       font-weight: 700;
       cursor: pointer;
+      transition: 0.2s;
+      font-family: 'Quicksand', sans-serif;
     }
-    .timer-big { font-size: 2rem; font-weight: 800; color: #ffb7c5; }
-    .two-col { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .two-col > * { flex: 1; }
+
+    .btn-primary:hover {
+      background: #ff9eb0;
+      transform: scale(1.02);
+    }
+
+    .timer-big {
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: monospace;
+      color: #ffb7c5;
+      margin: 0.5rem 0;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .badge {
+      background: rgba(255,183,197,0.2);
+      border-radius: 40px;
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
     .insight-card {
-      background: rgba(0,0,0,0.04);
+      background: rgba(255,183,197,0.1);
       border-radius: 20px;
-      padding: 0.7rem;
-      margin-top: 0.7rem;
+      padding: 0.8rem;
+      margin-top: 0.8rem;
       border-left: 3px solid #ffb7c5;
     }
-    footer { text-align: center; margin-top: 2rem; opacity: 0.7; }
-    @media (max-width: 900px) {
-      .dashboard-grid { grid-template-columns: repeat(2,1fr); }
-      .card-large, .card-full { grid-column: span 2; }
+
+    .two-col {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-    @media (max-width: 600px) {
-      .dashboard-grid { grid-template-columns: 1fr; }
-      .card-large, .card-full { grid-column: span 1; }
+
+    .two-col > * {
+      flex: 1;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      opacity: 0.7;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 800px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      .card-full {
+        grid-column: span 1;
+      }
+      .container {
+        padding: 1rem;
+      }
+      .hero-section h1 {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
 <div class="container">
+  <!-- Header with Droppy -->
   <div class="top-bar">
     <div class="logo-area">
-      <img src="droppy-hero.png" alt="Droppy">
+      <img src="droppy-hero.png" alt="Droppy the Water Droplet">
       <span class="logo-text">HYDRIFY AI • GIRL MODE</span>
     </div>
-    <button class="back-home" onclick="location.href='index.html'">🏠 Change Mode</button>
+    <button class="back-home" onclick="location.href='index.html'">🌸 Change World</button>
   </div>
 
-  <div class="hero-banner">
-    <div class="hero-img"><img src="Screenshot 2026-06-06 044251.png" alt="Hero"></div>
-    <div class="hero-text">
-      <h1>🌸 Kawaii Hydration Paradise 🌸</h1>
-      <p>Every sip is magical — meet Droppy, bunnies, and sparkling friends!</p>
-      <button class="btn-primary" id="heroSip">💧 Take a Magical Sip 💧</button>
+  <!-- Hero Section - BIG Droppy image -->
+  <div class="hero-section">
+    <div class="hero-image">
+      <img src="Screenshot 2026-06-06 044251.png" alt="Hydrify AI Hero">
     </div>
-    <div class="hero-img"><img src="Screenshot 2026-06-06 044907.png" alt="Cute stats"></div>
+    <h1>✨ The Cutest Way to Stay Hydrated! ✨</h1>
+    <p>Make a hydration app that's faith advanced and adorable — meet Droppy!</p>
+    <button class="btn-primary" id="heroSipBtn">💧 Start Your Magical Journey 💧</button>
   </div>
 
+  <!-- Dashboard Grid -->
   <div class="dashboard-grid">
-    <div class="card card-large">
+    
+    <!-- Today's Intake + Daily Goal Image -->
+    <div class="card">
       <h3>💧 TODAY'S INTAKE</h3>
-      <img src="Screenshot 2026-06-06 044615.png" style="max-height: 50px;">
-      <div><span class="stat-number" id="currentLiters">0</span> L / 3.0 L</div>
-      <div class="progress-bar-bg"><div class="progress-fill" id="progressFill"></div></div>
+      <img src="Screenshot 2026-06-06 044615.png" alt="Daily Goal" style="max-height: 60px;">
+      <div>
+        <span class="stat-number" id="currentLiters">0</span>
+        <span style="font-size:1.2rem;">L / 3.0 L</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div id="percentLabel">0% complete</div>
       <div class="quick-add">
         <button class="sip-btn" data-ml="100">+100ml</button>
         <button class="sip-btn" data-ml="250">+250ml</button>
@@ -239,104 +343,305 @@
       </div>
     </div>
 
+    <!-- Time for a sip + breath image -->
     <div class="card">
-      <h3>🔥 STREAK</h3>
-      <img src="Screenshot 2026-06-06 044855.png">
-      <div class="stat-number" id="streakValue">12</div>
-      <div>days</div>
+      <h3>🌊 Time for a Sip</h3>
+      <img src="Screenshot 2026-06-06 044002.png" alt="Time for a sip">
+      <div style="margin: 0.5rem 0;">2x breath • Stay hydrated</div>
+      <button class="sip-btn" id="mindfulSipBtn">✨ Mindful Sip +200ml ✨</button>
     </div>
 
+    <!-- Hydration Stats -->
     <div class="card">
-      <h3>⏰ REMINDER</h3>
-      <img src="Screenshot 2026-06-06 044847.png">
-      <div class="timer-big" id="timerDisplay">45:00</div>
-      <button class="sip-btn" id="drinkNow">💧 DRINK NOW</button>
-    </div>
-
-    <div class="card">
-      <h3>🗣️ VOICE</h3>
-      <img src="Screenshot 2026-06-06 044816.png">
-      <button class="sip-btn" id="voiceBtn">🔊 PLAY</button>
-    </div>
-
-    <div class="card card-large">
-      <h3>📊 WEEKLY</h3>
-      <img src="Screenshot 2026-06-06 044804.png">
-      <div id="weekChart" style="display: flex; gap: 1rem; margin: 1rem 0;"></div>
-    </div>
-
-    <div class="card">
-      <h3>🏆 ACHIEVEMENTS</h3>
-      <img src="Screenshot 2026-06-06 044827.png">
-      <div class="quick-add"><span>🌸 FIRST SIP</span><span>🔥 7D</span><span>💪 3L</span></div>
-    </div>
-
-    <div class="card">
-      <h3>🧠 SMART AI</h3>
-      <img src="Screenshot 2026-06-06 044223.png">
-      <div>💙 Weather + activity based</div>
-    </div>
-
-    <div class="card">
-      <h3>📈 INSIGHTS</h3>
-      <img src="Screenshot 2026-06-06 044839.png">
-      <div id="insightText" class="insight-card">Keep sipping! ✨</div>
-    </div>
-
-    <div class="card card-large">
-      <div class="two-col">
-        <div><h3>🌊 MINDFUL SIP</h3><img src="Screenshot 2026-06-06 044002.png"><button class="sip-btn" id="mindfulSip">+200ml</button></div>
-        <div><h3>⚔️ WARRIOR</h3><img src="Screenshot 2026-06-06 044907.png"><button class="btn-primary" id="warriorSip">+250ml</button></div>
+      <h3>📊 Hydration Stats</h3>
+      <img src="Screenshot 2026-06-06 044017.png" alt="Hydration Stats">
+      <div class="insight-card" id="statsInsight">
+        Daily overview • Keep flowing
       </div>
     </div>
 
+    <!-- Achievements & Rewards -->
+    <div class="card">
+      <h3>🏆 Achievements & Rewards</h3>
+      <img src="Screenshot 2026-06-06 044201.png" alt="Achievements">
+      <div class="badge-row">
+        <span class="badge">🌸 First Sip</span>
+        <span class="badge">🔥 7 Day Streak</span>
+        <span class="badge">💪 3L a Day</span>
+        <span class="badge">⭐ Hydration Beast</span>
+      </div>
+      <button class="sip-btn" id="claimRewardBtn">🎁 Claim Rewards</button>
+    </div>
+
+    <!-- Smart Hydration AI -->
+    <div class="card">
+      <h3>🧠 Smart Hydration AI</h3>
+      <img src="Screenshot 2026-06-06 044223.png" alt="Smart AI">
+      <ul style="margin: 0.8rem 0 0 1.2rem; line-height: 1.6;">
+        <li>☀️ Weather adaptive</li>
+        <li>🏃 Activity based</li>
+        <li>📊 Profile Data insights</li>
+      </ul>
+      <div style="margin-top: 0.5rem; color: #ff9eb0;">💙 Drink up, friend!</div>
+    </div>
+
+    <!-- Next Reminder + Timer -->
+    <div class="card">
+      <h3>⏰ Next Reminder</h3>
+      <img src="Screenshot 2026-06-06 044847.png" alt="Reminder">
+      <div class="timer-big" id="timerDisplay">45:00</div>
+      <div style="font-size:0.8rem;">MIN LEFT • Your body will thank you</div>
+      <div style="display: flex; gap: 10px; margin-top: 12px;">
+        <button class="sip-btn" id="dismissBtn">DISMISS</button>
+        <button class="btn-primary" id="drinkNowBtn">💧 DRINK NOW</button>
+      </div>
+    </div>
+
+    <!-- Voice Reminder -->
+    <div class="card">
+      <h3>🗣️ Voice Reminder</h3>
+      <img src="Screenshot 2026-06-06 044816.png" alt="Voice Reminder">
+      <div style="margin: 0.5rem 0;">Stay hydrated, stay sharp.</div>
+      <button class="sip-btn" id="voiceBtn">🔊 Play Reminder</button>
+    </div>
+
+    <!-- Current Streak -->
+    <div class="card">
+      <h3>🔥 Current Streak</h3>
+      <img src="Screenshot 2026-06-06 044855.png" alt="Streak">
+      <div class="stat-number" id="streakValue">12</div>
+      <div>DAYS • S M T W T F S</div>
+      <div style="margin-top: 8px; font-size:0.7rem;">/// DISCIPLINE TODAY ///<br>/// STRENGTH TOMORROW ///</div>
+    </div>
+
+    <!-- Weekly Hydration Chart -->
     <div class="card card-full">
-      <img src="Screenshot 2026-06-06 044913.png" style="max-height: 80px;">
-      <button class="btn-primary" id="focusBtn">⚡ ACTIVATE FOCUS</button>
+      <h3>📈 Weekly Hydration</h3>
+      <img src="Screenshot 2026-06-06 044804.png" alt="Weekly chart" style="max-height: 100px;">
+      <div id="weekChart" style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: space-around;"></div>
+      <div id="weeklyInsight" class="insight-card">
+        You drink more water on weekdays. Keep it consistent on weekends!
+      </div>
+    </div>
+
+    <!-- Hydration Insights -->
+    <div class="card card-full">
+      <h3>💡 Hydration Insights</h3>
+      <img src="Screenshot 2026-06-06 044839.png" alt="Insights">
+      <div id="dynamicInsight" class="insight-card">
+        You drink more water on weekdays. Keep it consistent on weekends!
+      </div>
+    </div>
+
+    <!-- Focus Mode -->
+    <div class="card card-full">
+      <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <img src="Screenshot 2026-06-06 044913.png" alt="Focus Mode" style="max-height: 80px;">
+        <div><strong>⚡ HYDRATION FOCUS POWER</strong><br>Boost reminders & stay in the zone</div>
+        <button class="btn-primary" id="focusBtn">ACTIVATE FOCUS</button>
+      </div>
     </div>
   </div>
-  <footer>💧 Drink up, friend! — Kawaii hydration magic ✨</footer>
+
+  <footer>
+    💧 Hydrify AI — "Drink up, friend!" — Every sip is magical ✨
+  </footer>
 </div>
 
 <script>
-  let currentML = 0, streak = 12, weekly = [1950,2280,2650,2250,2080,1650,1420];
-  function updateUI() {
-    let p = Math.min(100, currentML/3000*100);
-    document.getElementById('currentLiters').innerText = (currentML/1000).toFixed(1);
-    document.getElementById('progressFill').style.width = p+'%';
-    document.getElementById('streakValue').innerText = streak;
-    let insight = document.getElementById('insightText');
-    if(p>=100) insight.innerHTML = '🏆 PERFECT! You\'re a hydration hero! 🏆';
-    else if(p>=70) insight.innerHTML = '✨ Amazing! Keep sparkling! ✨';
-    else if(p>=30) insight.innerHTML = '💪 Good start! A few more sips!';
-    else insight.innerHTML = '💧 Take your first magical sip!';
-    let container = document.getElementById('weekChart');
-    let days = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
-    let maxV = Math.max(...weekly, currentML, 2500);
+  // ========== HYDRATION STATE ==========
+  let currentML = 0;
+  const GOAL_ML = 3000;
+  let streakDays = 12;
+  let weeklyData = [1900, 2200, 2600, 2200, 2000, 1600, 1400]; // MON-SUN
+
+  // DOM Elements
+  const currentSpan = document.getElementById('currentLiters');
+  const progressFill = document.getElementById('progressFill');
+  const percentLabel = document.getElementById('percentLabel');
+  const streakSpan = document.getElementById('streakValue');
+  const dynamicInsight = document.getElementById('dynamicInsight');
+  const weeklyInsight = document.getElementById('weeklyInsight');
+
+  // Render Weekly Chart
+  function renderWeekChart() {
+    const container = document.getElementById('weekChart');
+    const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+    const maxVal = Math.max(...weeklyData, currentML, 2600);
     container.innerHTML = '';
-    for(let i=0;i<weekly.length;i++) {
-      let h = Math.max(20, (weekly[i]/maxV)*70);
-      container.innerHTML += `<div style="flex:1;text-align:center"><div style="height:${h}px;background:#ffb7c5;border-radius:20px;width:70%;margin:0 auto"></div><div>${days[i]}</div><div>${(weekly[i]/1000).toFixed(1)}L</div></div>`;
+    for (let i = 0; i < weeklyData.length; i++) {
+      let height = (weeklyData[i] / maxVal) * 80;
+      height = Math.max(24, Math.min(100, height));
+      const barDiv = document.createElement('div');
+      barDiv.style.flex = '1';
+      barDiv.style.textAlign = 'center';
+      barDiv.innerHTML = `
+        <div style="height: ${height}px; background: linear-gradient(180deg, #ffb7c5, #ffd9e6); border-radius: 20px; width: 70%; margin: 0 auto;"></div>
+        <div style="font-size:0.7rem; margin-top: 5px; font-weight:600;">${days[i]}</div>
+        <div style="font-size:0.7rem;">${(weeklyData[i]/1000).toFixed(1)}L</div>
+      `;
+      container.appendChild(barDiv);
     }
   }
-  function addWater(ml) {
-    let was = currentML>=3000;
-    currentML = Math.min(3000, currentML+ml);
-    if(!was && currentML>=3000) { streak++; alert('🎉 GOAL COMPLETED! Streak: '+streak+' days! 🎉'); }
-    updateUI();
-    let today = new Date().getDay()-1;
-    if(today>=0 && currentML>weekly[today]) { weekly[today]=currentML; updateUI(); }
+
+  // Update all UI
+  function updateUI() {
+    const percent = Math.min(100, (currentML / GOAL_ML) * 100);
+    currentSpan.innerText = (currentML / 1000).toFixed(1);
+    progressFill.style.width = percent + '%';
+    percentLabel.innerText = Math.floor(percent) + '% complete';
+    streakSpan.innerText = streakDays;
+    renderWeekChart();
+
+    // Dynamic insights based on hydration level
+    if (percent >= 100) {
+      dynamicInsight.innerHTML = '🎉 PERFECT HYDRATION! You\'re a hydration hero! All mascots celebrate! 🎉';
+      weeklyInsight.innerHTML = '🏆 AMAZING WEEK! You reached your goal! Keep the momentum! 🏆';
+    } else if (percent >= 70) {
+      dynamicInsight.innerHTML = '✨ Amazing progress! You\'re glowing! A few more sips to perfection! ✨';
+      weeklyInsight.innerHTML = '📈 Great weekly trend! You drink more on weekdays — keep weekends strong!';
+    } else if (percent >= 30) {
+      dynamicInsight.innerHTML = '💪 Good start! Every sip brings you closer to your magical goal! 💪';
+      weeklyInsight.innerHTML = '🌸 You\'re building momentum — keep sipping through the weekend!';
+    } else {
+      dynamicInsight.innerHTML = '💧 Take your first magical sip! Your body will thank you with energy and sparkles! 💧';
+      weeklyInsight.innerHTML = '🌙 Start your hydration journey today — every small sip counts!';
+    }
   }
-  document.querySelectorAll('.sip-btn[data-ml]').forEach(b=>b.addEventListener('click',()=>addWater(parseInt(b.dataset.ml))));
-  document.getElementById('heroSip')?.addEventListener('click',()=>addWater(200));
-  document.getElementById('mindfulSip')?.addEventListener('click',()=>addWater(200));
-  document.getElementById('warriorSip')?.addEventListener('click',()=>addWater(250));
-  document.getElementById('drinkNow')?.addEventListener('click',()=>addWater(250));
-  document.getElementById('voiceBtn')?.addEventListener('click',()=>{if(speechSynthesis){let m=new SpeechSynthesisUtterance("Stay hydrated, stay sharp!"); window.speechSynthesis.speak(m);}});
-  document.getElementById('focusBtn')?.addEventListener('click',()=>alert('⚡ Focus Mode: Reminders every 25 min!'));
-  let t=2700, timer; const timerSpan=document.getElementById('timerDisplay');
-  function updateTimer(){let m=Math.floor(t/60),s=t%60; timerSpan.innerText=`${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`; if(t<=0){addWater(150); alert('💧 Reminder! +150ml added'); t=2700;} t--;}
-  timer=setInterval(updateTimer,1000);
+
+  // Add water function
+  function addWater(ml) {
+    const wasGoalReached = currentML >= GOAL_ML;
+    currentML = Math.min(GOAL_ML, currentML + ml);
+    updateUI();
+
+    if (!wasGoalReached && currentML >= GOAL_ML) {
+      streakDays++;
+      updateUI();
+      celebration('🎉🌸 GOAL COMPLETED! Streak increased to ' + streakDays + ' days! Droppy sparkles with joy! 🌸🎉');
+    }
+
+    // Update today's weekly data
+    const today = new Date().getDay() - 1;
+    if (today >= 0 && today <= 6 && currentML > weeklyData[today]) {
+      weeklyData[today] = currentML;
+      renderWeekChart();
+    }
+  }
+
+  // Celebration effect
+  function celebration(message) {
+    const toast = document.createElement('div');
+    toast.innerText = message;
+    toast.style.position = 'fixed';
+    toast.style.bottom = '25%';
+    toast.style.left = '50%';
+    toast.style.transform = 'translateX(-50%)';
+    toast.style.background = '#fff5e8ee';
+    toast.style.border = '2px solid #ffb7c5';
+    toast.style.borderRadius = '60px';
+    toast.style.padding = '1rem 2rem';
+    toast.style.zIndex = '10000';
+    toast.style.backdropFilter = 'blur(20px)';
+    toast.style.fontWeight = 'bold';
+    toast.style.fontSize = '1rem';
+    toast.style.color = '#4a3b4a';
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+
+    // Sparkle effect
+    for (let i = 0; i < 25; i++) {
+      const star = document.createElement('div');
+      star.innerHTML = ['💧', '✨', '⭐', '🌸', '💙', '🌟'][Math.floor(Math.random() * 6)];
+      star.style.position = 'fixed';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.bottom = '0%';
+      star.style.fontSize = (Math.random() * 22 + 16) + 'px';
+      star.style.pointerEvents = 'none';
+      star.style.transition = 'all 1.5s ease-out';
+      document.body.appendChild(star);
+      setTimeout(() => {
+        star.style.transform = `translateY(-${window.innerHeight * 0.6}px) rotate(20deg)`;
+        star.style.opacity = '0';
+      }, 20);
+      setTimeout(() => star.remove(), 1600);
+    }
+  }
+
+  // ========== TIMER FUNCTION ==========
+  let remainingSeconds = 45 * 60;
+  let timerInterval;
+  const timerDisplay = document.getElementById('timerDisplay');
+
+  function updateTimerDisplay() {
+    const mins = Math.floor(remainingSeconds / 60);
+    const secs = remainingSeconds % 60;
+    timerDisplay.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    if (remainingSeconds <= 0) {
+      clearInterval(timerInterval);
+      addWater(150);
+      celebration('💧 Reminder! +150ml added — keep your sparkle! 💧');
+      resetTimer();
+    }
+  }
+
+  function resetTimer() {
+    remainingSeconds = 45 * 60;
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      if (remainingSeconds > 0) {
+        remainingSeconds--;
+        updateTimerDisplay();
+      }
+    }, 1000);
+    updateTimerDisplay();
+  }
+
+  // ========== EVENT LISTENERS ==========
+  // Sip buttons
+  document.querySelectorAll('.sip-btn[data-ml]').forEach(btn => {
+    btn.addEventListener('click', () => addWater(parseInt(btn.getAttribute('data-ml'))));
+  });
+
+  document.getElementById('heroSipBtn')?.addEventListener('click', () => addWater(200));
+  document.getElementById('mindfulSipBtn')?.addEventListener('click', () => addWater(200));
+  document.getElementById('drinkNowBtn')?.addEventListener('click', () => {
+    addWater(250);
+    resetTimer();
+  });
+  document.getElementById('dismissBtn')?.addEventListener('click', resetTimer);
+
+  // Voice reminder
+  document.getElementById('voiceBtn')?.addEventListener('click', () => {
+    if ('speechSynthesis' in window) {
+      const msg = new SpeechSynthesisUtterance("Stay hydrated, stay sharp. Time for a magical sip, friend!");
+      msg.rate = 0.9;
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(msg);
+    } else {
+      alert("🔊 Stay hydrated, stay sharp!");
+    }
+  });
+
+  // Claim rewards
+  document.getElementById('claimRewardBtn')?.addEventListener('click', () => {
+    if (currentML >= 1500) {
+      celebration('🎁 You unlocked the "Hydration Hero" badge! Keep sparkling! 🎁');
+    } else {
+      alert('🌸 Keep sipping! Reach 1.5L to unlock your magical reward! 🌸');
+    }
+  });
+
+  // Focus mode
+  document.getElementById('focusBtn')?.addEventListener('click', () => {
+    celebration('⚡ FOCUS MODE ACTIVATED! Enhanced reminders will keep you hydrated! ⚡');
+    setInterval(() => {
+      if (currentML < GOAL_ML) addWater(60);
+    }, 1200000); // Every 20 minutes
+  });
+
+  // Initialize
+  resetTimer();
   updateUI();
 </script>
 </body>
