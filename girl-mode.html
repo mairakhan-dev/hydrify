@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Hydrify AI · Intelligent Hydration & Wellness</title>
+  <title>Hydrify AI · Ultra Hydration Hub | Smart Reminders + 10+ Epic Features</title>
   <style>
     * {
       margin: 0;
@@ -13,84 +13,79 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Quicksand', sans-serif;
-      background: #f0f9f4;
-      background-image: radial-gradient(circle at 10% 20%, rgba(150, 212, 180, 0.15) 1.8%, transparent 2.2%);
-      background-size: 32px 32px;
+      background: #eef7ef;
+      background-image: radial-gradient(circle at 15% 35%, rgba(120, 200, 160, 0.12) 2%, transparent 2.5%);
+      background-size: 40px 40px;
       min-height: 100vh;
       color: #1a3a2b;
       scroll-behavior: smooth;
     }
 
-    /* subtle glass morphism */
+    /* Glass morphism enhanced */
     .glass-card {
-      background: rgba(255, 253, 245, 0.85);
-      backdrop-filter: blur(2px);
+      background: rgba(255, 253, 248, 0.92);
+      backdrop-filter: blur(3px);
       border-radius: 56px;
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 245, 225, 0.6);
+      box-shadow: 0 25px 40px -16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 245, 225, 0.7);
+      transition: all 0.2s;
     }
 
     .app-container {
-      max-width: 1400px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 0 2rem 2.5rem;
     }
 
-    /* FULL WIDTH HEADER - graceful image treatment */
+    /* BIGGER HEADER IMAGE */
     .full-header {
       width: calc(100% + 4rem);
       margin-left: -2rem;
       margin-right: -2rem;
-      margin-bottom: 2rem;
-      background: linear-gradient(145deg, #ffffff 0%, #fef7e8 100%);
-      border-bottom: 2px solid #ffdfb8;
-      box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2.5rem;
+      background: linear-gradient(145deg, #ffffff 0%, #fff6e6 100%);
+      border-bottom: 3px solid #ffdbb5;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12);
     }
     .full-header img {
       width: 100%;
       display: block;
       object-fit: cover;
-      max-height: 290px;
-      object-position: center 30%;
-      transition: transform 0.2s ease;
+      max-height: 380px;
+      object-position: center 20%;
     }
 
-    /* droppy-hero modern card */
+    /* droppy-hero BIGGER */
     .droppy-row {
       display: flex;
       justify-content: flex-end;
       margin-bottom: 2rem;
     }
     .droppy-card {
-      background: linear-gradient(135deg, #fffdf8 0%, #fff7ec 100%);
-      border-radius: 56px;
-      padding: 1.2rem 1.5rem;
-      box-shadow: 0 18px 32px -12px rgba(0, 0, 0, 0.12);
-      border: 1px solid #ffe9cf;
+      background: linear-gradient(135deg, #fffef9 0%, #fff4e4 100%);
+      border-radius: 64px;
+      padding: 1.4rem 1.8rem;
+      box-shadow: 0 24px 40px -16px rgba(0, 0, 0, 0.15);
+      border: 1px solid #ffe5c7;
       text-align: center;
-      transition: all 0.2s;
-      width: 420px;
+      width: 480px;
     }
     .droppy-card img {
       width: 100%;
-      border-radius: 44px;
+      border-radius: 48px;
+      max-height: 240px;
       object-fit: contain;
-      max-height: 180px;
-      transition: transform 0.2s;
-    }
-    .droppy-card:hover img {
-      transform: scale(1.01);
     }
     .droppy-card span {
       display: block;
-      margin-top: 12px;
-      font-weight: 600;
+      margin-top: 14px;
+      font-weight: 700;
+      font-size: 1.2rem;
       background: linear-gradient(120deg, #c27e42, #e09d5e);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
     }
 
-    /* two column layout fluid */
     .two-columns {
       display: flex;
       flex-wrap: wrap;
@@ -99,479 +94,488 @@
     }
     .two-columns > * {
       flex: 1;
-      min-width: 280px;
+      min-width: 300px;
     }
 
-    /* modern card */
     .card {
       background: rgba(255, 252, 245, 0.96);
-      backdrop-filter: blur(0px);
-      border-radius: 52px;
+      border-radius: 56px;
       padding: 1.8rem;
-      box-shadow: 0 18px 32px -14px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 20px 32px -14px rgba(0, 0, 0, 0.08);
       border: 1px solid #ffedd9;
-      transition: all 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 40px -18px rgba(0, 0, 0, 0.15);
     }
 
+    /* PROGRESS */
     .progress-bar-bg {
-      background: #e5d9cc;
+      background: #e1d2c0;
       border-radius: 100px;
-      height: 40px;
+      height: 44px;
       overflow: hidden;
       margin: 1rem 0;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.08);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
     }
     .progress-fill {
       width: 0%;
-      background: linear-gradient(95deg, #54b0d4, #8fd3ff, #6fc8b0);
+      background: linear-gradient(95deg, #48a0c9, #7bc9f0, #64c0a0);
       height: 100%;
       border-radius: 100px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding-right: 18px;
+      padding-right: 20px;
       color: white;
-      font-weight: 700;
+      font-weight: 800;
       transition: width 0.45s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      font-size: 0.9rem;
+      animation: shimmerFlow 2.5s infinite linear;
+      background-size: 200% auto;
+    }
+    @keyframes shimmerFlow {
+      0% { background-position: 0% 0; }
+      100% { background-position: 200% 0; }
     }
 
     .btn-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.7rem;
+      gap: 0.8rem;
       margin: 1.2rem 0;
     }
     .cute-btn {
       background: #f0e2d2;
       border: none;
-      padding: 10px 24px;
+      padding: 12px 28px;
       border-radius: 60px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.9rem;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: 0.2s;
       font-family: inherit;
-      color: #4b3a28;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      color: #3b2c1e;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     .cute-btn-primary {
-      background: #d2e6c0;
+      background: #cbe6b5;
       color: #2b5434;
-      font-weight: 700;
     }
     .cute-btn-primary:hover {
-      background: #c2ddab;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px -8px rgba(0,0,0,0.12);
+      background: #b8da9c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px -12px rgba(0,0,0,0.2);
     }
-    .log-list {
+
+    .stats-img-card, .achievements-img-card, .footer-img {
+      text-align: center;
+      background: #fffcf4;
+      border-radius: 56px;
+      padding: 1.5rem;
+      margin: 1.8rem 0;
+      border: 1px solid #ffe8cf;
+    }
+    .stats-img-card img, .achievements-img-card img, .footer-img img {
+      max-width: 100%;
+      border-radius: 44px;
+      max-height: 280px;
+      object-fit: contain;
+    }
+
+    /* NEW FEATURE STYLES */
+    .reminder-banner {
+      background: #e6f4ea;
+      border-radius: 48px;
+      padding: 14px 22px;
+      margin: 16px 0;
       display: flex;
+      align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-      max-height: 160px;
-      overflow-y: auto;
-      padding: 4px 2px;
+      gap: 12px;
+      border-left: 8px solid #48a0c9;
     }
-    .log-entry {
-      background: rgba(255,255,245,0.9);
-      border-radius: 40px;
-      padding: 6px 18px;
-      font-size: 0.8rem;
-      border-left: 4px solid #7bc5a4;
-      font-weight: 500;
-      backdrop-filter: blur(2px);
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .insight-card {
+      background: #fef7e8;
+      border-radius: 32px;
+      padding: 12px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .streak-fire {
+      font-size: 1.6rem;
     }
     select, input {
       background: #fffef9;
-      border: 1px solid #ffdead;
-      border-radius: 48px;
-      padding: 10px 18px;
+      border: 1px solid #ffdaae;
+      border-radius: 60px;
+      padding: 10px 20px;
       font-family: inherit;
-      font-weight: 500;
-      transition: 0.1s;
-    }
-    .stats-img-card, .achievements-img-card {
-      text-align: center;
-      background: #fffbf0;
-      border-radius: 52px;
-      padding: 1.4rem;
-      margin: 1.5rem 0;
-      border: 1px solid #ffe6cb;
-    }
-    .footer-img {
-      margin-top: 2.5rem;
-      text-align: center;
-      background: #fffbf3;
-      border-radius: 52px;
-      padding: 1.5rem;
-      border: 2px solid #ffe2be;
-    }
-    .badge-unlock {
-      font-size: 0.75rem;
-      margin-top: 6px;
-      color: #b5723b;
-      font-weight: 500;
-    }
-    hr {
-      margin: 1.2rem 0;
-      border-color: #ffefde;
-    }
-    .ai-glow {
-      background: linear-gradient(125deg, #fff3e4, #feeedc);
-      transition: 0.2s;
     }
     @media (max-width: 780px) {
       .app-container { padding: 0 1rem 2rem; }
       .full-header { width: calc(100% + 2rem); margin-left: -1rem; margin-right: -1rem; }
-      .droppy-row { justify-content: center; }
-      .card { padding: 1.4rem; }
-    }
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f0e4d4;
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #c7ac84;
-      border-radius: 10px;
+      .droppy-card { width: 100%; }
     }
   </style>
 </head>
 <body>
 <div class="app-container">
 
-  <!-- FULL WIDTH HEADER: Hero visual -->
+  <!-- BIGGER HEADER IMAGE -->
   <div class="full-header">
-    <img src="Screenshot 2026-06-06 044251.png" alt="Hydrify AI: Intelligent Hydration Assistant">
+    <img src="Screenshot 2026-06-06 044251.png" alt="Hydrify AI Ultra">
   </div>
 
-  <!-- droppy-hero.png - floating cool design -->
+  <!-- DROPPY HERO BIGGER -->
   <div class="droppy-row">
     <div class="droppy-card">
-      <img src="droppy-hero.png" alt="Droppy · AI Magic">
-      <span>✨ Droppy AI · Smart Hydration, Cute Intelligence ✨</span>
+      <img src="droppy-hero.png" alt="Droppy AI Hero">
+      <span>💧 DROPPY AI · NEXT GEN HYDRATION INTELLIGENCE 💧</span>
     </div>
   </div>
 
-  <!-- SMART HYDRATION AI ROW: tracker + AI panel -->
+  <!-- MAIN TRACKER + AI SECTION (2 cols) -->
   <div class="two-columns">
-    <!-- LEFT: Advanced hydration hub -->
+    <!-- LEFT: TRACKER + 5+ NEW FEATURES embedded -->
     <div class="card">
-      <h3 style="color:#a5713c; display: flex; gap: 8px; align-items: center;">💧 <span>Neural Hydration Core</span></h3>
+      <h3 style="color:#a5713c;">💧 Hydration Command Center</h3>
       <div class="progress-bar-bg">
         <div class="progress-fill" id="waterFillBar">0%</div>
       </div>
-      <div style="display: flex; justify-content: space-between; font-weight: 600; margin-top: 6px;">
+      <div style="display: flex; justify-content: space-between; font-weight: 700;">
         <span id="currentCupsText">0 / 2000 ml</span>
-        <span id="goalPercent" style="background:#ffefdf; padding: 2px 12px; border-radius: 40px;">0%</span>
+        <span id="goalPercent" style="background:#fff0e0; padding:4px 16px; border-radius:40px;">0%</span>
       </div>
       <div class="btn-group">
-        <button class="cute-btn cute-btn-primary" id="addCupBtn">🧊 +1 cup (250ml)</button>
+        <button class="cute-btn cute-btn-primary" id="addCupBtn">🥛 +1 cup (250ml)</button>
         <button class="cute-btn cute-btn-primary" id="addBigBtn">💦 +2 cups (500ml)</button>
-        <button class="cute-btn" id="resetBtn">🔄 Reset</button>
+        <button class="cute-btn" id="resetBtn">⟳ Reset Day</button>
       </div>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 6px;">
-        <input type="number" id="customMl" placeholder="Custom ml" style="width: 120px;" value="">
-        <button class="cute-btn" id="addCustomBtn">✨ Add custom</button>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <input type="number" id="customMl" placeholder="Custom ml" style="width: 130px;">
+        <button class="cute-btn" id="addCustomBtn">✨ Add</button>
+        <button class="cute-btn" id="quick250Btn">⚡ Quick 250ml</button>
       </div>
-      <div style="margin-top: 20px;">
-        <div style="font-weight: 600; color:#7f623b;">📋 Sip Logbook</div>
-        <div class="log-list" id="drinkLogContainer">
-          <div style="color:#bc9a72;">✨ No sips yet — add your first drop ✨</div>
-        </div>
+
+      <!-- NEW FEATURE 1: DRINK SOUND EFFECT (optional visual toast) -->
+      <div id="drinkToast" style="font-size:0.8rem; margin-top:8px; color:#6c8b5e;"></div>
+
+      <!-- NEW FEATURE 2: STREAK COUNTER & WEEKLY STREAK -->
+      <div class="insight-grid">
+        <div class="insight-card">🔥 Streak: <span id="streakCount">0</span> days</div>
+        <div class="insight-card">🏆 Best Streak: <span id="bestStreak">0</span></div>
+        <div class="insight-card">💧 Today's Sips: <span id="sipCountToday">0</span></div>
+        <div class="insight-card">⚡ Fastest Goal: <span id="fastestGoal">—</span></div>
       </div>
+      
+      <div class="log-list" id="drinkLogContainer"></div>
     </div>
 
-    <!-- RIGHT: AI Smart Recommendations + 044223.png -->
-    <div class="card" style="background: linear-gradient(125deg, #fffcf4, #fff7ec);">
-      <img src="Screenshot 2026-06-06 044223.png" alt="Smart Hydration AI — Weather + Activity Model" style="width: 100%; border-radius: 42px; margin-bottom: 1.2rem; box-shadow: 0 6px 12px rgba(0,0,0,0.05);">
-      <div>
-        <h4 style="color:#b46f37; display: flex; gap: 6px;">🧠 <span>AI Hydration Engine</span></h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0.9rem 0;">
-          <select id="weatherSelect">
-            <option value="hot">☀️ Heatwave · hot & sweaty</option>
-            <option value="normal" selected>🌿 Mild · comfortable</option>
-            <option value="cold">❄️ Cold / Dry air</option>
-          </select>
-          <select id="activitySelect">
-            <option value="low">🛌 Low · sedentary</option>
-            <option value="moderate" selected>🚶 Moderate · active daily</option>
-            <option value="high">🏃 High · intense workout</option>
-          </select>
-          <select id="profileSelect">
-            <option value="standard">👤 Standard wellness</option>
-            <option value="athlete">⚡ Athlete · high performance</option>
-            <option value="light">🌸 Light & mindful</option>
-          </select>
-        </div>
-        <button class="cute-btn cute-btn-primary" id="aiAdviceBtn" style="width: 100%;">💡 AI Personalized Advice</button>
-        <div id="aiSuggestionBox" style="margin-top: 1.2rem; background: #fef0e2; border-radius: 32px; padding: 14px; font-size: 0.9rem; border-left: 4px solid #67b392;">
-          💙 Tap 'AI Personalized Advice' to get smart guidance.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Stats visual: Screenshot 2026-06-06 044017.png (Hydration stats panel) -->
-  <div class="stats-img-card">
-    <img src="Screenshot 2026-06-06 044017.png" alt="Hydration Stats · Daily intelligence" style="max-width: 100%; border-radius: 44px;">
-    <div style="margin-top: 14px; font-weight: 500; color:#b3763e;">📊 "Deep hydration metrics — Daily k 0wechs Crupts" — AI insights</div>
-  </div>
-
-  <!-- ACHIEVEMENTS area with original image + unlock system -->
-  <div class="two-columns">
-    <!-- functional achievements -->
+    <!-- RIGHT: AI + NEW FEATURES + BIGGER IMAGE -->
     <div class="card">
-      <h3 style="color:#a16e3a;">🏆 Legendary Rewards</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0;">
-        <div><strong>⚡ Uickest Cost</strong><br><span id="badgeQuick" style="font-size:0.8rem; background:#fff1e4; padding:2px 8px; border-radius:60px;">🔒 Locked</span></div>
-        <div><strong>📅 Daily Stracles</strong><br><span id="badgeDaily" style="font-size:0.8rem; background:#fff1e4; padding:2px 8px; border-radius:60px;">🔒 Locked</span></div>
-        <div><strong>🧠 Advisory</strong><br><span id="badgeAdvisory" style="font-size:0.8rem; background:#fff1e4; padding:2px 8px; border-radius:60px;">🔒 Locked</span></div>
-        <div><strong>🎴 Tun Alucards</strong><br><span id="badgeTun" style="font-size:0.8rem; background:#fff1e4; padding:2px 8px; border-radius:60px;">🔒 Locked</span></div>
+      <img src="Screenshot 2026-06-06 044223.png" alt="Smart AI" style="width: 100%; border-radius: 48px; margin-bottom: 1rem; max-height: 200px; object-fit: cover;">
+      <h4 style="color:#b46f37;">🧠 AI Hydration Oracle</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0.9rem 0;">
+        <select id="weatherSelect"><option value="hot">☀️ Hot</option><option value="normal" selected>🌿 Mild</option><option value="cold">❄️ Cold</option></select>
+        <select id="activitySelect"><option value="low">🛋️ Low</option><option value="moderate" selected>🚶 Moderate</option><option value="high">🏃 High</option></select>
+        <select id="profileSelect"><option value="standard">👤 Standard</option><option value="athlete">⚡ Athlete</option><option value="light">🌸 Light</option></select>
       </div>
-      <div id="achievementMessage" style="background: linear-gradient(135deg, #ffecdb, #ffe6d0); border-radius: 36px; padding: 12px; text-align: center; font-weight: 500;"></div>
-    </div>
-
-    <!-- right side: original screenshot 044201.png (achievements visual) -->
-    <div class="card" style="background: #fffbf0; text-align: center; display: flex; flex-direction: column; justify-content: center;">
-      <img src="Screenshot 2026-06-06 044201.png" alt="Achievements & Rewards original artwork" style="width: 100%; border-radius: 48px; max-height: 220px; object-fit: contain;">
-      <div style="margin-top: 14px; font-weight: 500; letter-spacing: -0.2px;">🎖️ Uickest Cost · Daily Stracles · Advisory · Tun Alucards 🎖️</div>
+      <button class="cute-btn cute-btn-primary" id="aiAdviceBtn" style="width:100%">💡 Get AI Blueprint</button>
+      <div id="aiSuggestionBox" style="margin-top: 1rem; background:#fef0e2; border-radius: 32px; padding: 12px;"></div>
+      
+      <!-- NEW FEATURE 3: HOURLY REMINDER TOGGLE & STATUS -->
+      <div class="reminder-banner" id="reminderBanner">
+        <span>⏰ <strong>Hourly Hydration Reminder</strong></span>
+        <button class="cute-btn" id="toggleReminderBtn" style="background:#d9e6cf;">🔔 Enable</button>
+      </div>
+      <div id="reminderStatusMsg" style="font-size:0.8rem; color:#5f7849;">🔕 Reminders off — Click enable to get gentle alerts every hour.</div>
     </div>
   </div>
 
-  <!-- FOOTER: Screenshot 2026-06-06 044002.png (time for a slot etc) -->
+  <!-- STATS IMAGE BIGGER -->
+  <div class="stats-img-card">
+    <img src="Screenshot 2026-06-06 044017.png" alt="Hydration Stats">
+    <div style="margin-top: 12px; font-weight: 600;">📈 Advanced Metrics & AI Predictions</div>
+  </div>
+
+  <!-- ACHIEVEMENTS SECTION WITH ORIGINAL IMAGE BIGGER -->
+  <div class="two-columns">
+    <div class="card">
+      <h3>🏅 Legendary Rewards (4 Originals + New)</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div>⚡ Uickest Cost: <span id="badgeQuick">🔒</span></div>
+        <div>📅 Daily Stracles: <span id="badgeDaily">🔒</span></div>
+        <div>🧠 Advisory: <span id="badgeAdvisory">🔒</span></div>
+        <div>🎴 Tun Alucards: <span id="badgeTun">🔒</span></div>
+        <!-- NEW FEATURE 4: EXTRA ACHIEVEMENTS -->
+        <div>🔥 5-Day Streak: <span id="badgeStreak5">🔒</span></div>
+        <div>💯 3L Club: <span id="badge3L">🔒</span></div>
+      </div>
+      <div id="achievementMessage" style="background:#ffefdf; border-radius: 32px; padding: 12px; margin-top: 12px;"></div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <img src="Screenshot 2026-06-06 044201.png" alt="Achievements" style="width:100%; border-radius:48px; max-height:260px; object-fit:contain;">
+      <div style="margin-top: 12px;">✨ Original Reward Artifacts ✨</div>
+    </div>
+  </div>
+
+  <!-- FOOTER IMAGE BIGGER + NEW FEATURE: WEEKLY SUMMARY -->
   <div class="footer-img">
-    <img src="Screenshot 2026-06-06 044002.png" alt="Reminder grid · Time for a slot">
-    <div style="margin-top: 14px; font-weight: 600; color:#a56d3a;">⏳ Hydration Rhythm · 2–3 hours · Stay Hvel acodt 💧</div>
-    <div style="font-size: 0.8rem; margin-top: 6px;">Original concept: daily slot reminders & intelligent pacing</div>
+    <img src="Screenshot 2026-06-06 044002.png" alt="Reminder Slot">
+    <div style="margin-top: 14px; font-weight: 700;">🕒 Smart Hydration Slots · Every 2-3 hours</div>
+    <!-- NEW FEATURE 5: WEEKLY GOAL PROGRESS -->
+    <div style="margin-top: 16px; background:#f6ede2; border-radius: 48px; padding: 12px;">
+      <span>📅 Weekly Hydration Goal: <span id="weeklyTotal">0</span> / 10000 ml</span>
+      <progress id="weeklyProgress" value="0" max="10000" style="width:80%; height:12px; border-radius:20px;"></progress>
+    </div>
+    <!-- NEW FEATURE 6: LAST DRINK TIMER -->
+    <div style="margin-top: 12px;">⏱️ Last drink: <span id="lastDrinkTime">—</span></div>
   </div>
-
-  <div style="text-align: center; margin: 2rem 0 0.5rem; color:#b88247; font-weight: 600;">
-    💙 Hydrify AI — The cutest & smartest move to stay refreshed 💙
-  </div>
+  <div style="text-align: center; margin: 2rem 0 0; font-weight: 700;">💙 Hydrify AI — 10+ epic features, hourly reminders, streak system & smarter hydration 💙</div>
 </div>
 
 <script>
-  // ---------- SMART HYDRATION CORE ----------
+  // ---------- CORE DATA ----------
   let totalMl = 0;
-  const DAILY_GOAL_ML = 2000;
+  const DAILY_GOAL = 2000;
   let drinkRecords = [];
-
-  const waterFillBar = document.getElementById('waterFillBar');
-  const currentCupsText = document.getElementById('currentCupsText');
-  const goalPercentSpan = document.getElementById('goalPercent');
-  const drinkLogContainer = document.getElementById('drinkLogContainer');
-  const badgeQuick = document.getElementById('badgeQuick');
-  const badgeDaily = document.getElementById('badgeDaily');
-  const badgeAdvisory = document.getElementById('badgeAdvisory');
-  const badgeTun = document.getElementById('badgeTun');
-  const achievementMsgDiv = document.getElementById('achievementMessage');
-
-  // helper: update every badge + ui
-  function updateHydrationUI() {
-    const percent = Math.min(100, (totalMl / DAILY_GOAL_ML) * 100);
-    waterFillBar.style.width = `${percent}%`;
-    waterFillBar.innerText = `${Math.floor(percent)}%`;
-    currentCupsText.innerText = `${totalMl} / ${DAILY_GOAL_ML} ml`;
-    goalPercentSpan.innerText = `${Math.floor(percent)}%`;
-
-    if (drinkRecords.length === 0) {
-      drinkLogContainer.innerHTML = '<div style="color:#bc9a72;">✨ Add your first sip ✨</div>';
-    } else {
-      drinkLogContainer.innerHTML = drinkRecords.slice(0, 12).map(r => `<div class="log-entry">💧 ${r.amountMl} ml · ${new Date(r.timestamp).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div>`).join('');
-    }
-
-    // --- UICKEST COST: early or big hydration before 2pm or high intake
-    const currentHour = new Date().getHours();
-    const earlyHydration = (totalMl >= 1000 && currentHour < 14) || totalMl >= 1400;
-    if (earlyHydration) {
-      badgeQuick.innerHTML = "🏅 UNLOCKED! Uickest Cost prize ✨";
-      badgeQuick.style.color = "#347a3e";
-      badgeQuick.style.fontWeight = "bold";
-    } else {
-      badgeQuick.innerHTML = "🔒 1000ml before 2pm or 1400ml total";
-    }
-
-    // Daily Stracles: 1500ml
-    if (totalMl >= 1500) {
-      badgeDaily.innerHTML = "🌟 Daily Stracles UNLOCKED! 🌟";
-      badgeDaily.style.color = "#c2712d";
-      badgeDaily.style.fontWeight = "bold";
-    } else {
-      badgeDaily.innerHTML = "🔒 Reach 1500ml today";
-    }
-
-    // Advisory: using AI or reaching 1200ml
-    let advisoryUnlocked = localStorage.getItem('advisoryUnlocked') === 'true';
-    if (advisoryUnlocked || totalMl >= 1200) {
-      badgeAdvisory.innerHTML = "🧠 Advisory ACHIEVED! 🧠";
-      badgeAdvisory.style.color = "#2a785a";
-      badgeAdvisory.style.fontWeight = "bold";
-      if (!advisoryUnlocked && totalMl >= 1200) {
-        localStorage.setItem('advisoryUnlocked', 'true');
+  let currentStreak = 0;
+  let bestStreak = 0;
+  let reminderInterval = null;
+  let remindersEnabled = false;
+  let lastDrinkTimestamp = null;
+  let weeklyTotalMl = 0;     // tracks last 7 days (simulated with localStorage)
+  
+  // Load saved data
+  function loadStorage() {
+    const savedTotal = localStorage.getItem('hydrify_totalMl');
+    const savedStreak = localStorage.getItem('hydrify_streak');
+    const savedBest = localStorage.getItem('hydrify_bestStreak');
+    const savedWeekly = localStorage.getItem('hydrify_weeklyTotal');
+    const savedRecords = localStorage.getItem('hydrify_records');
+    const savedDate = localStorage.getItem('hydrify_lastDate');
+    const today = new Date().toDateString();
+    if (savedDate !== today) {
+      // new day: update streak if yesterday reached goal
+      const yesterdayGoal = localStorage.getItem('hydrify_yesterdayGoalMet') === 'true';
+      if (yesterdayGoal) {
+        currentStreak = currentStreak + 1;
+        if (currentStreak > bestStreak) bestStreak = currentStreak;
+      } else {
+        currentStreak = 0;
       }
+      localStorage.setItem('hydrify_lastDate', today);
+      totalMl = 0;
+      drinkRecords = [];
+      localStorage.setItem('hydrify_totalMl', '0');
+      localStorage.setItem('hydrify_records', JSON.stringify([]));
     } else {
-      badgeAdvisory.innerHTML = "🔒 Use AI advice or hydrate 1200ml";
+      if (savedTotal) totalMl = parseInt(savedTotal);
+      if (savedStreak) currentStreak = parseInt(savedStreak);
+      if (savedBest) bestStreak = parseInt(savedBest);
+      if (savedRecords) drinkRecords = JSON.parse(savedRecords);
     }
-
-    // Tun Alucards: full goal
-    if (totalMl >= DAILY_GOAL_ML) {
-      badgeTun.innerHTML = "🎴✨ TUN ALUCARDS UNLOCKED! ✨🎴";
-      badgeTun.style.color = "#d97924";
-      badgeTun.style.fontWeight = "bold";
-    } else {
-      badgeTun.innerHTML = `🔒 Complete ${DAILY_GOAL_ML}ml goal`;
-    }
-
-    // dynamic celebration message
-    let unlockedList = [];
-    if (totalMl >= DAILY_GOAL_ML) unlockedList.push("🎴 Tun Alucards");
-    if (totalMl >= 1500) unlockedList.push("📅 Daily Stracles");
-    if (earlyHydration) unlockedList.push("⚡ Uickest Cost");
-    if ((localStorage.getItem('advisoryUnlocked') === 'true') || totalMl >= 1200) unlockedList.push("🧠 Advisory");
-    if (unlockedList.length) {
-      achievementMsgDiv.innerHTML = `🏆✨ CELEBRATION! ✨🏆<br> Unlocked: ${unlockedList.join(' · ')} 🎉`;
-    } else {
-      achievementMsgDiv.innerHTML = "💪 Keep hydrating! Each sip unlocks unique rewards. 💪";
-    }
+    if (savedWeekly) weeklyTotalMl = parseInt(savedWeekly);
+    else weeklyTotalMl = 0;
+    updateHydrationUI();
   }
-
+  
+  function saveState() {
+    localStorage.setItem('hydrify_totalMl', totalMl);
+    localStorage.setItem('hydrify_streak', currentStreak);
+    localStorage.setItem('hydrify_bestStreak', bestStreak);
+    localStorage.setItem('hydrify_records', JSON.stringify(drinkRecords));
+    localStorage.setItem('hydrify_weeklyTotal', weeklyTotalMl);
+    const goalMet = totalMl >= DAILY_GOAL;
+    localStorage.setItem('hydrify_yesterdayGoalMet', goalMet);
+  }
+  
   function addWater(amountMl) {
     if (amountMl > 0) {
       totalMl += amountMl;
-      drinkRecords.unshift({ amountMl: amountMl, timestamp: new Date().toISOString() });
-      if (drinkRecords.length > 20) drinkRecords.pop();
+      weeklyTotalMl += amountMl;
+      drinkRecords.unshift({ amountMl, timestamp: new Date().toISOString() });
+      lastDrinkTimestamp = new Date();
+      if (drinkRecords.length > 25) drinkRecords.pop();
       updateHydrationUI();
-
-      // Special congratulatory when hitting goal exactly
-      if (totalMl >= DAILY_GOAL_ML && (totalMl - amountMl) < DAILY_GOAL_ML) {
-        achievementMsgDiv.innerHTML = "🎉🎊 HYDRAION BONANZA! You smashed the daily goal! All badges shine! 🎊🎉";
-        setTimeout(() => updateHydrationUI(), 1800);
+      showDrinkToast(`+${amountMl} ml added! ✨`);
+      saveState();
+      // Check goal completion for streak tomorrow
+      if (totalMl >= DAILY_GOAL) {
+        document.getElementById('achievementMessage').innerHTML = "🎉 GOAL ACHIEVED! Streak will increase tomorrow! 🎉";
       }
+      // extra badge: 3L club
+      if (totalMl >= 3000) document.getElementById('badge3L').innerHTML = "🏆 3L MASTER";
+      updateExtendedAchievements();
     }
-  }
-
-  function resetData() {
-    if (confirm("♻️ Reset all today's hydration? Your achievements will reset for the day.")) {
-      totalMl = 0;
-      drinkRecords = [];
-      // preserve advisory unlock from localStorage? keep but not resetting global but per day advisory can be re-earned
-      // we won't remove advisory unless we want clean? but we keep localStorage advisory - but user may want full reset? better keep state coherent
-      updateHydrationUI();
-      achievementMsgDiv.innerHTML = "✨ Fresh start! Let's hydrate brilliantly today ✨";
-    }
-  }
-
-  // Event listeners
-  document.getElementById('addCupBtn').addEventListener('click', () => addWater(250));
-  document.getElementById('addBigBtn').addEventListener('click', () => addWater(500));
-  document.getElementById('resetBtn').addEventListener('click', resetData);
-  document.getElementById('addCustomBtn').addEventListener('click', () => {
-    let val = parseInt(document.getElementById('customMl').value);
-    if (isNaN(val) || val <= 0) { alert("💧 Please enter a valid ml amount (positive number)"); return; }
-    addWater(val);
-    document.getElementById('customMl').value = '';
-  });
-
-  // ----- AI INTELLIGENT RECOMMENDER (advanced) -----
-  const weatherSelect = document.getElementById('weatherSelect');
-  const activitySelect = document.getElementById('activitySelect');
-  const profileSelect = document.getElementById('profileSelect');
-  const aiAdviceBtn = document.getElementById('aiAdviceBtn');
-  const aiSuggestionBox = document.getElementById('aiSuggestionBox');
-
-  function getDynamicAIAdvice() {
-    const weather = weatherSelect.value;
-    const activity = activitySelect.value;
-    const profile = profileSelect.value;
-    
-    let baseNeeds = 2000;
-    if (profile === 'athlete') baseNeeds = 2900;
-    else if (profile === 'light') baseNeeds = 1650;
-    
-    let weatherBonus = 0;
-    if (weather === 'hot') weatherBonus = 520;
-    else if (weather === 'cold') weatherBonus = -120;
-    
-    let activityBonus = 0;
-    if (activity === 'high') activityBonus = 700;
-    else if (activity === 'moderate') activityBonus = 220;
-    else if (activity === 'low') activityBonus = 0;
-    
-    let recommendedTotal = baseNeeds + weatherBonus + activityBonus;
-    recommendedTotal = Math.min(3600, Math.max(1250, recommendedTotal));
-    
-    const remaining = Math.max(0, recommendedTotal - totalMl);
-    const cupsNeeded = Math.ceil(remaining / 250);
-    
-    let style = "";
-    let motivational = "";
-    if (remaining <= 0) {
-      motivational = "🌟 Supreme! You're above AI target. Keep up the great momentum! 🌟";
-    } else if (remaining <= 600) {
-      motivational = "🌊 Almost there! A couple more sips and you'll hit the smart target!";
-    } else {
-      motivational = "💪 Your AI coach recommends small, consistent sips throughout the day.";
-    }
-    
-    let contextDesc = `Weather: ${weatherSelect.options[weatherSelect.selectedIndex].text.split('·')[0]} · Activity: ${activitySelect.options[activitySelect.selectedIndex].text.split('·')[0]} · Profile: ${profileSelect.options[profileSelect.selectedIndex].text}`;
-    let adviceMsg = `
-      <strong>🧪 AI Hydration Analysis</strong><br>
-      ${contextDesc}<br>
-      🎯 <strong>Daily smart target:</strong> ${recommendedTotal} ml<br>
-      📍 <strong>Remaining to reach AI goal:</strong> ${remaining > 0 ? remaining + ' ml' : '✅ Already exceeded!'}<br>
-      ${remaining > 0 ? `💧 <strong>Recommended:</strong> about ${cupsNeeded} cup(s) (~${Math.ceil(remaining/250)*250} ml)` : '🏆 You are a hydration champion!'}<br>
-      ✨ ${motivational}
-    `;
-    return { adviceMsg, recommendedTotal };
   }
   
-  aiAdviceBtn.addEventListener('click', () => {
-    const { adviceMsg, recommendedTotal } = getDynamicAIAdvice();
-    aiSuggestionBox.innerHTML = `✨ <strong>Smart AI Insight</strong> ✨<br>${adviceMsg}`;
-    aiSuggestionBox.style.background = "#eafbeb";
-    aiSuggestionBox.style.borderLeftColor = "#429b6e";
+  function showDrinkToast(msg) {
+    const toastDiv = document.getElementById('drinkToast');
+    toastDiv.innerHTML = msg;
+    setTimeout(() => { if(toastDiv) toastDiv.innerHTML = ''; }, 1800);
+  }
+  
+  // UI Updates + 10+ features dynamic
+  function updateHydrationUI() {
+    const percent = Math.min(100, (totalMl / DAILY_GOAL) * 100);
+    document.getElementById('waterFillBar').style.width = `${percent}%`;
+    document.getElementById('waterFillBar').innerText = `${Math.floor(percent)}%`;
+    document.getElementById('currentCupsText').innerText = `${totalMl} / ${DAILY_GOAL} ml`;
+    document.getElementById('goalPercent').innerText = `${Math.floor(percent)}%`;
+    document.getElementById('sipCountToday').innerText = drinkRecords.length;
+    document.getElementById('streakCount').innerText = currentStreak;
+    document.getElementById('bestStreak').innerText = bestStreak;
+    document.getElementById('weeklyTotal').innerText = weeklyTotalMl;
+    const weeklyProgressElem = document.getElementById('weeklyProgress');
+    if(weeklyProgressElem) weeklyProgressElem.value = Math.min(weeklyTotalMl, 10000);
+    if(lastDrinkTimestamp) document.getElementById('lastDrinkTime').innerText = lastDrinkTimestamp.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+    else document.getElementById('lastDrinkTime').innerText = '—';
     
-    // unlock advisory badge instantly if not yet unlocked
-    if (!localStorage.getItem('advisoryUnlocked')) {
+    // Fastest Goal: if daily goal reached, compute time difference
+    if(totalMl >= DAILY_GOAL && drinkRecords.length > 0) {
+      const firstDrink = drinkRecords[drinkRecords.length-1]?.timestamp;
+      if(firstDrink) {
+        const start = new Date(firstDrink);
+        const now = new Date();
+        const diffMins = Math.floor((now - start)/60000);
+        document.getElementById('fastestGoal').innerText = diffMins > 0 ? `${diffMins} min` : 'Fast!';
+      } else document.getElementById('fastestGoal').innerText = '🏅';
+    } else document.getElementById('fastestGoal').innerText = '—';
+    
+    // Log rendering
+    const logDiv = document.getElementById('drinkLogContainer');
+    if(drinkRecords.length === 0) logDiv.innerHTML = '<div style="color:#bc9a72;">✨ No sips yet — add your first drop ✨</div>';
+    else logDiv.innerHTML = drinkRecords.slice(0, 12).map(r => `<div class="log-entry">💧 ${r.amountMl} ml · ${new Date(r.timestamp).toLocaleTimeString()}</div>`).join('');
+    
+    // Legacy achievements
+    const earlyHydration = (totalMl >= 1000 && new Date().getHours() < 14) || totalMl >= 1400;
+    document.getElementById('badgeQuick').innerHTML = earlyHydration ? "✅ UNLOCKED" : "🔒";
+    document.getElementById('badgeDaily').innerHTML = totalMl >= 1500 ? "⭐ UNLOCKED" : "🔒";
+    let advisoryUnlocked = localStorage.getItem('advisoryUnlocked') === 'true';
+    document.getElementById('badgeAdvisory').innerHTML = (advisoryUnlocked || totalMl >= 1200) ? "🧠 UNLOCKED" : "🔒";
+    document.getElementById('badgeTun').innerHTML = totalMl >= DAILY_GOAL ? "🎴 UNLOCKED" : "🔒";
+    updateExtendedAchievements();
+    saveState();
+  }
+  
+  function updateExtendedAchievements() {
+    if(currentStreak >= 5) document.getElementById('badgeStreak5').innerHTML = "🔥 5-Day Streak!";
+    if(totalMl >= 3000) document.getElementById('badge3L').innerHTML = "💎 3L Club";
+  }
+  
+  // NEW FEATURE 7: HOURLY REMINDER ENGINE
+  function startHourlyReminders() {
+    if(reminderInterval) clearInterval(reminderInterval);
+    reminderInterval = setInterval(() => {
+      if(remindersEnabled) {
+        const now = new Date();
+        const msg = `💙 HYDRIFY REMINDER: Time for water! You've had ${totalMl}ml today. Goal: ${DAILY_GOAL}ml. Stay fresh!`;
+        alert(msg);
+        // Also show banner effect
+        const banner = document.getElementById('reminderStatusMsg');
+        banner.innerHTML = "🔔 Hourly reminder: Drink water now! 💧";
+        setTimeout(() => { if(banner) banner.innerHTML = "✅ Reminders active — you'll get alerts every hour."; }, 3000);
+      }
+    }, 3600000); // every hour
+  }
+  
+  function toggleReminders() {
+    remindersEnabled = !remindersEnabled;
+    const btn = document.getElementById('toggleReminderBtn');
+    const statusMsg = document.getElementById('reminderStatusMsg');
+    if(remindersEnabled) {
+      btn.innerText = "🔕 Disable";
+      btn.style.background = "#f5d5b5";
+      statusMsg.innerHTML = "✅ Hourly reminders ACTIVE. You'll get gentle nudges each hour.";
+      if(!reminderInterval) startHourlyReminders();
+    } else {
+      btn.innerText = "🔔 Enable";
+      btn.style.background = "#d9e6cf";
+      statusMsg.innerHTML = "🔕 Reminders off. Click enable to receive hourly hydration alerts.";
+    }
+    localStorage.setItem('remindersEnabled', remindersEnabled);
+  }
+  
+  // AI advice + advisory badge unlock
+  function getAIAdvice() {
+    const weather = document.getElementById('weatherSelect').value;
+    const activity = document.getElementById('activitySelect').value;
+    const profile = document.getElementById('profileSelect').value;
+    let base = profile==='athlete'?2900:(profile==='light'?1650:2000);
+    let weatherAdj = weather==='hot'?520:(weather==='cold'?-120:0);
+    let actAdj = activity==='high'?700:(activity==='moderate'?220:0);
+    let rec = Math.min(3600, Math.max(1250, base+weatherAdj+actAdj));
+    let remain = Math.max(0, rec - totalMl);
+    return { rec, remain, cupsNeeded: Math.ceil(remain/250) };
+  }
+  document.getElementById('aiAdviceBtn').addEventListener('click', () => {
+    const { rec, remain, cupsNeeded } = getAIAdvice();
+    const adviceHtml = `<strong>🧪 AI Smart Plan</strong><br>🎯 Target: ${rec} ml<br>📉 Remaining: ${remain} ml<br>💧 ~${cupsNeeded} more cups<br>✨ Keep sipping!`;
+    document.getElementById('aiSuggestionBox').innerHTML = adviceHtml;
+    if(!localStorage.getItem('advisoryUnlocked')) {
       localStorage.setItem('advisoryUnlocked', 'true');
       updateHydrationUI();
-      achievementMsgDiv.innerHTML = "🧠 Advisory unlocked! You harnessed the power of Hydrify AI. Brilliant! 🧠";
-    } else {
-      updateHydrationUI(); // refresh badge status
+      document.getElementById('achievementMessage').innerHTML = "🧠 Advisory unlocked via AI wisdom!";
     }
-    
-    // Also give a fun fluid reminder effect
-    setTimeout(() => {
-      aiSuggestionBox.style.background = "#fef0e2";
-      aiSuggestionBox.style.borderLeftColor = "#67b392";
-    }, 1500);
   });
   
-  // Preload state & localStorage sync for advisory from previous sessions
-  if (!localStorage.getItem('advisoryUnlocked')) {
-    // default not unlocked, but we keep consistency
-  }
-  updateHydrationUI();
+  // Event listeners + extra features: Quick add, custom, reset, etc
+  document.getElementById('addCupBtn').addEventListener('click', () => addWater(250));
+  document.getElementById('addBigBtn').addEventListener('click', () => addWater(500));
+  document.getElementById('quick250Btn').addEventListener('click', () => addWater(250));
+  document.getElementById('addCustomBtn').addEventListener('click', () => {
+    let val = parseInt(document.getElementById('customMl').value);
+    if(isNaN(val) || val<=0) alert("Enter valid ml");
+    else addWater(val);
+    document.getElementById('customMl').value = '';
+  });
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if(confirm("Reset today's hydration?")) { totalMl=0; drinkRecords=[]; updateHydrationUI(); saveState(); showDrinkToast("Reset done — fresh start!"); }
+  });
+  document.getElementById('toggleReminderBtn').addEventListener('click', toggleReminders);
   
-  // Extra cool animation: animate progress bar shimmer
-  const styleShimmer = document.createElement('style');
-  styleShimmer.textContent = `
-    .progress-fill {
-      background-size: 200% auto;
-      background-image: linear-gradient(95deg, #54b0d4, #8fd3ff, #6fc8b0, #54b0d4);
-      animation: shimmerProgress 3s infinite linear;
+  // NEW FEATURE 8: FUN FACT GENERATOR
+  const funFacts = ["💧 Drinking water boosts mood!", "🧠 Your brain is 75% water!", "💙 Hydration helps skin glow!", "🏃 Even 1% dehydration affects focus."];
+  setInterval(() => {
+    const factDiv = document.createElement('div');
+    if(document.getElementById('drinkToast')) {
+      const randomFact = funFacts[Math.floor(Math.random()*funFacts.length)];
+      const existing = document.getElementById('funFactMsg');
+      if(!existing) {
+        let msgDiv = document.createElement('div');
+        msgDiv.id = 'funFactMsg';
+        msgDiv.style.fontSize = '0.75rem'; msgDiv.style.marginTop = '12px';
+        msgDiv.style.background = '#f2e9de'; msgDiv.style.borderRadius='28px'; msgDiv.style.padding='6px';
+        msgDiv.innerHTML = `✨ ${randomFact}`;
+        document.querySelector('.card')?.appendChild(msgDiv);
+        setTimeout(() => msgDiv.remove(), 5000);
+      }
     }
-    @keyframes shimmerProgress {
-      0% { background-position: 0% 0; }
-      100% { background-position: 200% 0; }
-    }
-  `;
-  document.head.appendChild(styleShimmer);
+  }, 30000);
+  
+  // NEW FEATURE 9: DRINK SPEED CHALLENGE (bonus)
+  let lastDrinkAmount = 0;
+  function challengeMode() { if(drinkRecords.length>1) alert("💪 SPEED CHALLENGE: Try 500ml in under 20min!"); }
+  setInterval(challengeMode, 120000);
+  
+  // NEW FEATURE 10: NIGHT MODE HINT - auto color change
+  const hourNow = new Date().getHours();
+  if(hourNow > 20 || hourNow < 6) document.body.style.backgroundColor = "#dcefe0";
+  
+  // load reminder preference
+  const savedReminder = localStorage.getItem('remindersEnabled');
+  if(savedReminder === 'true') { remindersEnabled = true; toggleReminders(); }
+  startHourlyReminders();
+  loadStorage();
 </script>
 </body>
 </html>
