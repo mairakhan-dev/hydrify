@@ -21,79 +21,81 @@
     }
 
     .app-container {
-      max-width: 1300px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 2rem 2rem 2.5rem;
+      padding: 0 2rem 2.5rem;
     }
 
-    /* Header row: left side main title image + right side droppy-hero */
-    .header-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-      align-items: stretch;
+    /* FULL WIDTH HEADER - image covers left to right */
+    .full-header {
+      width: calc(100% + 4rem);
+      margin-left: -2rem;
+      margin-right: -2rem;
+      margin-bottom: 2rem;
+      background: #fff8f0;
+      border-bottom: 4px solid #ffe0c0;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
     }
-    .header-title-card {
-      flex: 1.2;
+    .full-header img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 280px;
+      object-position: center;
+    }
+
+    /* second row: droppy-hero.png on the right side */
+    .droppy-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 2rem;
+    }
+    .droppy-card {
+      width: 380px;
+      max-width: 100%;
       background: #fffaf2;
       border-radius: 48px;
-      padding: 1.8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-      border: 2px solid #ffdfbb;
-    }
-    .header-title-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 32px;
-      display: block;
-      margin: 0 auto;
-      max-height: 180px;
-      object-fit: contain;
-    }
-    .header-droppy {
-      flex: 0.9;
-      background: #fff8ef;
-      border-radius: 48px;
       padding: 1rem;
-      text-align: center;
       box-shadow: 0 12px 24px rgba(0,0,0,0.05);
       border: 2px solid #ffe0bd;
+      text-align: center;
     }
-    .header-droppy img {
+    .droppy-card img {
       width: 100%;
-      max-height: 240px;
+      border-radius: 36px;
       object-fit: contain;
-      border-radius: 32px;
+      max-height: 200px;
+    }
+    .droppy-card span {
+      display: block;
+      margin-top: 8px;
+      font-weight: 500;
+      color: #bb7a42;
     }
 
-    /* universal card style */
-    .card {
-      background: #fffbf4;
-      border-radius: 48px;
-      padding: 1.6rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
-      border: 1px solid #ffefda;
-      transition: transform 0.1s ease;
-    }
-
-    /* two-column layout for some sections */
+    /* two column layout for Smart AI row */
     .two-columns {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
     .two-columns > * {
       flex: 1;
       min-width: 260px;
     }
 
-    /* progress / tracker elements */
+    /* card style */
+    .card {
+      background: #fffbf4;
+      border-radius: 48px;
+      padding: 1.6rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+      border: 1px solid #ffefda;
+      transition: transform 0.1s ease;
+    }
+
+    /* progress bar */
     .progress-bar-bg {
       background: #eadbc8;
       border-radius: 100px;
@@ -163,16 +165,26 @@
       padding: 8px 16px;
       font-family: inherit;
     }
-    hr {
-      margin: 1rem 0;
-      border-color: #ffebd2;
+    .stats-img-card, .achievements-img-card {
+      text-align: center;
+      background: #fff6ea;
+      border-radius: 48px;
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+      border: 1px solid #ffe2c1;
+    }
+    .stats-img-card img, .achievements-img-card img {
+      max-width: 100%;
+      border-radius: 36px;
+      max-height: 220px;
+      object-fit: contain;
     }
     .footer-img {
       margin-top: 2rem;
       text-align: center;
       background: #fff7ed;
       border-radius: 48px;
-      padding: 1rem;
+      padding: 1.2rem;
       border: 2px solid #ffe2c1;
     }
     .footer-img img {
@@ -186,35 +198,36 @@
       margin-top: 4px;
       color: #b26b36;
     }
+    hr {
+      margin: 1rem 0;
+      border-color: #ffebd2;
+    }
     @media (max-width: 780px) {
-      .app-container { padding: 1rem; }
-      .header-row { flex-direction: column; }
+      .app-container { padding: 0 1rem 2rem; }
+      .full-header { width: calc(100% + 2rem); margin-left: -1rem; margin-right: -1rem; }
+      .droppy-row { justify-content: center; }
     }
   </style>
 </head>
 <body>
 <div class="app-container">
 
-  <!-- HEADER ROW: left = "Hydrify AI: The Cutssst Mov to Stay Hydrated!" image (Screenshot 2026-06-06 044251.png) 
-       right = droppy-hero.png -->
-  <div class="header-row">
-    <div class="header-title-card">
-      <img src="Screenshot 2026-06-06 044251.png" alt="Hydrify AI: The Cutssst Mov to Stay Hydrated!">
-      <div style="text-align: center; margin-top: 8px; font-weight: 500; color:#bb7a42;">✨ main mantra ✨</div>
-    </div>
-    <div class="header-droppy">
+  <!-- FULL WIDTH HEADER: Screenshot 2026-06-06 044251.png (Hydrify AI: The Cutssst Mov to Stay Hydrated!) -->
+  <div class="full-header">
+    <img src="Screenshot 2026-06-06 044251.png" alt="Hydrify AI: The Cutssst Mov to Stay Hydrated! - full width header">
+  </div>
+
+  <!-- droppy-hero.png on the right side -->
+  <div class="droppy-row">
+    <div class="droppy-card">
       <img src="droppy-hero.png" alt="Droppy Hero - Magic it CUTE and ADVANCED!">
-      <div style="margin-top: 6px; font-weight: 500; color:#bb7a42;">💙 Magic it CUTE and ADVANCED! 💙</div>
+      <span>💙 Magic it CUTE and ADVANCED! 💙</span>
     </div>
   </div>
 
-  <!-- RIGHT SIDE AFTER HEADER: Screenshot 2026-06-06 044223.png (Smart Hydration AI) 
-       placed in a two-column layout with the tracker, or as standalone on the right? 
-       Actually we follow: "this one on the right after the header" — so we create a 2-col row: 
-       Left side = Hydration Tracker, Right side = Smart Hydration AI image + interactive elements? 
-       But also the image itself should be visible. I'll put the image and keep functionality. -->
+  <!-- SMART HYDRATION AI ROW: Screenshot 044223.png placed on the right after the header (two-column: left tracker + right image + AI) -->
   <div class="two-columns">
-    <!-- LEFT COLUMN: Today's Hydration + stats -->
+    <!-- LEFT: functional hydration tracker -->
     <div class="card">
       <h3 style="color:#9e6e42;">💧 Today's Hydration</h3>
       <div class="progress-bar-bg">
@@ -238,7 +251,7 @@
       </div>
     </div>
 
-    <!-- RIGHT COLUMN: Screenshot 044223.png (Smart Hydration AI) exactly as image + interactive micro AI -->
+    <!-- RIGHT: Screenshot 044223.png (Smart Hydration AI) + interactive AI -->
     <div class="card" style="background: #fffaf0;">
       <img src="Screenshot 2026-06-06 044223.png" alt="Smart Hydration AI - Weather Activity Profile" style="width: 100%; border-radius: 32px; margin-bottom: 1rem;">
       <div style="margin-top: 0.5rem;">
@@ -269,14 +282,14 @@
   </div>
 
   <!-- AFTER TODAY'S HYDRATION: Screenshot 2026-06-06 044017.png (Hydration Stats) -->
-  <div class="card" style="text-align: center; background: #fff6ea;">
-    <img src="Screenshot 2026-06-06 044017.png" alt="Hydration Stats - Daily k 0wechs Crupts" style="max-width: 100%; border-radius: 36px; max-height: 220px; object-fit: contain;">
+  <div class="stats-img-card">
+    <img src="Screenshot 2026-06-06 044017.png" alt="Hydration Stats - Daily k 0wechs Crupts">
     <div style="margin-top: 12px; font-style: italic; color:#a56f3f;">💧 "Slow for carbs and older van-" · Daily k 0wechs Crupts 💧</div>
   </div>
 
-  <!-- ACHIEVEMENTS SECTION + then after achievements: Screenshot 044201.png -->
+  <!-- ACHIEVEMENTS SECTION: functional + original image after achievements -->
   <div class="two-columns">
-    <!-- Left: Functional Achievements (based on your design) -->
+    <!-- Left: Functional Achievements (unlockable based on hydration) -->
     <div class="card">
       <h3 style="color:#9e6e42;">🏅 Achievements & Rewards</h3>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
@@ -288,7 +301,7 @@
       <div id="achievementMessage" style="background:#ffe4ca; border-radius: 32px; padding: 8px; text-align: center; font-size:0.85rem;"></div>
     </div>
 
-    <!-- Right: Screenshot 044201.png (Achievements & Rewards original image) -->
+    <!-- Right: Screenshot 044201.png (Achievements & Rewards original image) AFTER achievements section -->
     <div class="card" style="background: #fff5e8; text-align: center;">
       <img src="Screenshot 2026-06-06 044201.png" alt="Achievements & Rewards original design" style="width: 100%; border-radius: 32px; max-height: 240px; object-fit: contain;">
       <div style="margin-top: 10px;">🏆 Uickest Cost · Daily Stracles · Advisory · Tun Alucards 🏆</div>
@@ -308,24 +321,21 @@
 </div>
 
 <script>
-  // FUNCTIONALITY (hydration tracker, achievements, AI advice)
+  // FUNCTIONALITY: hydration tracker, achievements, AI advice (using original design terms)
   let totalMl = 0;
   const DAILY_GOAL_ML = 2000;
-  let drinkRecords = []; // { amountMl, timestamp }
+  let drinkRecords = [];
 
-  // DOM elements
   const waterFillBar = document.getElementById('waterFillBar');
   const currentCupsText = document.getElementById('currentCupsText');
   const goalPercentSpan = document.getElementById('goalPercent');
   const drinkLogContainer = document.getElementById('drinkLogContainer');
-  // badges
   const badgeQuick = document.getElementById('badgeQuick');
   const badgeDaily = document.getElementById('badgeDaily');
   const badgeAdvisory = document.getElementById('badgeAdvisory');
   const badgeTun = document.getElementById('badgeTun');
   const achievementMsgDiv = document.getElementById('achievementMessage');
 
-  // Helper update UI
   function updateHydrationUI() {
     const percent = Math.min(100, (totalMl / DAILY_GOAL_ML) * 100);
     waterFillBar.style.width = `${percent}%`;
@@ -333,15 +343,13 @@
     currentCupsText.innerText = `${totalMl} / ${DAILY_GOAL_ML} ml`;
     goalPercentSpan.innerText = `${Math.floor(percent)}%`;
 
-    // update log list
     if (drinkRecords.length === 0) {
       drinkLogContainer.innerHTML = '<div style="color:#bc9a72;">No drinks yet. Add your first sip!</div>';
     } else {
       drinkLogContainer.innerHTML = drinkRecords.map(r => `<div class="log-entry">💧 ${r.amountMl} ml · ${new Date(r.timestamp).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}</div>`).join('');
     }
 
-    // ---- ACHIEVEMENTS logic based on original design labels ----
-    // Uickest Cost prizes: if user reaches 1000ml before 2pm (quick progress) OR total>=1400ml
+    // Achievements logic from original designs
     const nowHour = new Date().getHours();
     const isEarlyHydration = (totalMl >= 1000 && nowHour < 14) || totalMl >= 1400;
     if (isEarlyHydration) {
@@ -350,14 +358,14 @@
     } else {
       badgeQuick.innerHTML = "🔒 Drink 1000ml before 2pm or reach 1400ml";
     }
-    // Daily Stracles: if totalMl >= 1500ml
+
     if (totalMl >= 1500) {
       badgeDaily.innerHTML = "⭐ Unlocked! Daily Stracles completed";
       badgeDaily.style.color = "#c2792e";
     } else {
       badgeDaily.innerHTML = "🔒 Reach 1500ml today";
     }
-    // Advisory: if used AI advice at least once (tracked via flag) or totalMl>=1200
+
     let advisoryFlag = localStorage.getItem('advisoryUnlocked') === 'true';
     if (advisoryFlag || totalMl >= 1200) {
       badgeAdvisory.innerHTML = "🧠 Unlocked! Advisory achieved";
@@ -366,14 +374,14 @@
     } else {
       badgeAdvisory.innerHTML = "🔒 Use AI recommendation or hydrate >1200ml";
     }
-    // Tun Alucards: goal completion
+
     if (totalMl >= DAILY_GOAL_ML) {
       badgeTun.innerHTML = "🎴✨ UNLOCKED! Tun Alucards ✨🎴";
       badgeTun.style.color = "#c16927";
     } else {
       badgeTun.innerHTML = `🔒 Complete ${DAILY_GOAL_ML}ml goal`;
     }
-    // summary message
+
     let unlockedArr = [];
     if (totalMl >= DAILY_GOAL_ML) unlockedArr.push("🏆 Tun Alucards");
     if (totalMl >= 1500) unlockedArr.push("📅 Daily Stracles");
@@ -414,7 +422,7 @@
     document.getElementById('customMl').value = '';
   });
 
-  // AI advice functionality (Smart Hydration AI)
+  // AI advice integration
   const weatherSelect = document.getElementById('weatherSelect');
   const activitySelect = document.getElementById('activitySelect');
   const profileSelect = document.getElementById('profileSelect');
@@ -446,7 +454,6 @@
   aiAdviceBtn.addEventListener('click', () => {
     const tip = getAIHydrationTip();
     aiSuggestionBox.innerHTML = `✨ AI Suggestion ✨<br>${tip}`;
-    // unlock advisory if not already
     if (!localStorage.getItem('advisoryUnlocked')) {
       localStorage.setItem('advisoryUnlocked', 'true');
       updateHydrationUI();
@@ -456,11 +463,7 @@
     }
   });
 
-  // also AI unlocks if any click later 
-  // initial load
   updateHydrationUI();
-
-  // if advisory unlocked from previous session reflect
   if (localStorage.getItem('advisoryUnlocked') === 'true') updateHydrationUI();
 </script>
 </body>
